@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+i{
+    pointer-events: none;
+}
+
+body{
+    background: linear-gradient(90deg, rgb(83,150, 255), rgb(100, 255,134));
+}
+
+div.sort {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0rem;
+      
+    button {
+        cursor: pointer;
+        background-color: rgb(0, 212, 166);
+        color: white;
+        border: none;
+        padding: 0.25rem 1rem;
+        font-size: 1.75rem;
+        border-radius: 10rem;
+    }
+}
+
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+
+    h1{
+        min-width: 500px;
+        color: white;
+        font-size: 3rem;
+    }
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input, button{
+        border: none;
+        padding: .25rem 1rem;
+        font-size: 1.75rem;
+        margin: .1rem;
+        height: 35px;
+        border-radius: 5rem;
+    }
+
+    input[type="date"]{
+        min-width: 300px;
+        text-align: center;
+    }
+
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+         -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+          -moz-appearance: textfield;
+    }   
+    
+    button{
+        cursor: pointer;
+        background-color: rgb(55, 107, 248);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@keyframes scaleUp{
+        from{
+            transform: scale(0);
+        }
+
+        to{
+            transform: scale(1);
+        }
+}
+
+@keyframes scaleDown{
+        to{
+            transform: scale(0);
+        }
+}
+
+.done{
+        opacity: .5;
+        text-decoration: line-through;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    div.todo-event {
+        width: 30vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0.2rem 0rem;
+        transition: all 0.3s ease;
+    
+        p {
+          overflow:hidden;
+          white-space:noerap;
+          background-color: rgba(20, 228, 255, 0);
+          color: black;
+          padding: 0.05rem 0.5rem;
+          font-size: 1.75rem;
+        }
+    
+        p.todo-text {
+          min-width: 300px;
+        }
+        p.todo-time {
+          min-width: 200px;
+          text-align: center;
+        }
+    
+        button {
+          padding: 0.25rem 0.5rem;
+          font-size: 1.75rem;
+          border: none;
+          cursor: pointer;
+          color: white;
+          border-radius: 30%;
+        }
+    
+        button.complete {
+          background-color: rgb(50, 255, 50, 0.5);
+        }
+        button.trash {
+          background-color: rgb(75, 75, 75, 0.5);
+        }
+    }
+}
